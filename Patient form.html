@@ -1,0 +1,104 @@
+<html>
+   
+   <head>
+      <title>Patient form</title>
+      <script src = "angular.min.js"></script>
+      
+      <style>
+         table, th , td {
+            border: 1px solid grey;
+            border-collapse: collapse;
+            padding: 5px;
+         }
+         
+         table tr:nth-child(odd) {
+            background-color: #f2f2f2;
+         }
+         
+         table tr:nth-child(even) {
+            background-color: #ffffff;
+         }
+      </style>
+      
+   </head>
+   <body>
+      <h2>Patient Prescription Form</h2>
+      <div ng-app = "mainApp" ng-controller = "patientController">
+         
+         <table border = "0">
+            <tr>
+               <td>Enter first name:</td>
+               <td><input type = "text" ng-model = "patient.firstName" required></td>
+            </tr>
+            
+            <tr>
+               <td>Enter last name: </td>
+               <td>
+                  <input type = "text" ng-model = "patient.lastName" required>
+               </td>
+            </tr>
+			<tr> 
+			<td>Enter phone number : </td>
+			<td>
+			<input type="text" ng-model="patient.phonenumber" maxlength="10" required>
+			</td>
+			</tr>
+			
+            
+            <tr>
+               <td>Name: </td>
+               <td>{{patient.fullName()}}</td>
+            </tr>
+			<tr>
+			<td> Number : </td>
+			<td>{{patient.phonenumber}}</td>
+			</tr>
+            
+            <tr>
+               <td>Medicines</td>
+					
+               <td>
+                  <table>
+                     <tr>
+                        <th>Medicine Name</th>.
+                        <th>Quantity</th>
+						<th>Before/After Food</th>
+						<th>Morning</th>
+						<th>Afternoon</th>
+						<th>Night</th>
+                     </tr>
+                     
+                     <tr ng-repeat = "medicine in patient.medicine">
+                        <td>{{ patient.name }}</td>
+                        <td>{{ patient.medicine }}</td>
+                     </tr>
+							
+                  </table>
+               </td>
+					
+            </tr>
+         </table>
+         
+      </div>
+      
+      <script>
+         var mainApp = angular.module("mainApp", []);
+         
+         mainApp.controller('patientController', function($scope) {
+            $scope.patient = {
+               firstName: "",
+               lastName: "",
+       
+               
+               fullName: function() {
+                  var patientObject;
+                  patientObject = $scope.patient;
+                  return patientObject.firstName + " " + patientObject.lastName;
+               }
+            };
+			
+         });
+      </script>
+      
+   </body>
+</html>

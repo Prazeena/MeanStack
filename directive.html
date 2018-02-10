@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<script src="angular.min.js"></script>
+<body ng-app="myApp">
+
+<a-directive></a-directive>
+
+<script>
+var app = angular.module("myApp", []);
+app.directive("a-directive", function() {
+    return {
+        {{4+5}}
+    };
+});
+</script>
+
+</body>
+</html>

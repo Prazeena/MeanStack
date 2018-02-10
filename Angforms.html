@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<script src="angular.min.js"></script>
+<body>
+
+<div ng-app="">
+<form>
+First Name: <input type="text" ng-model="firstname"placeholder="First name"><br>
+Last Name: <input type="text" ng-model="lastname" placeholder="Last name"><br>
+Gender :   <br> <input type ="radio" ng-model="myVar" value="Male">Male <br>
+             <input type="radio" ng-model="myVar" value="Female">Female<br>
+	Confirm your details:<input type="checkbox" ng-model="myVarr" >
+</form>
+<p> First name : {{firstname}} <br>
+Last name : {{lastname}} <br>
+</p>
+<div ng-switch="myVar">
+  <div ng-switch-when="Male">
+     
+     <p>Male</p>
+  </div>
+  <div ng-switch-when="Female">
+    
+     <p>Female</p>
+  </div>
+  </div>
+
+<div ng-show="myVarr">
+<h1>Welcome <h1>
+<p >Welcome to your homepage </p>
+</div>
+</body>
+</html>
