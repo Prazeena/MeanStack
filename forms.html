@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+function func(){
+alert("dfdsfsdf");
+/*var x=document.details.firstname.value;
+document.getElementById('fname').innerHTML=x;
+docuemnt.getElementById('fsname').style.display='none';
+var y=document.details.lastname.value;
+document.getElementById('lname').innerHTML=y;
+docuemnt.getElementById('lsname').style.display='none';
+var z=document.details.D.O.B.value;
+document.getElementById('date').innerHTML=z;
+docuemnt.getElementById('dates').style.display='none';*/
+var f=document.details.message.value;
+alert(f);
+return false;
+document.getElementById('fdback').innerHTML=x;
+docuemnt.getElementById('feedbck').style.display='none';
+}
+</script>
+
+<form action="#"  name="details">
+<h3 style="background-color:#F8C471;font-family:Comic Sans MS;font-color:#A04000;">
+<p> STUDENT REGISTRATION</p>
+  First name:<br>
+  <input type="text" name="firstname" value="                  "required id="fsname">
+<br>
+<p id="fname"></p>
+
+ <br> Last name:<br>
+  <input type="text" name="lastname" value="                    "id="lsname">
+<br>
+<p id="lname"></p>
+<br>
+  Date.Of.Birth:<br>
+
+  <input type="text" name="D.O.B" value="dd/mm/yyyy" id="dates">
+<br>
+<p id="date"></p>
+<p> Select department</p>
+  <input type="radio"  name="Dept" value=" Information Technology"checked id="> IT<br>
+  <input type="radio"  name="Dept" value="Computer Science"> CSC<br>
+  <input type="radio"  name="Dept"  value="Mechanical">MECH<br>
+<p>Select Year</p>
+ <select name="Year">
+     <option value="        "></option>
+    <option value="First">First</option>
+    <option value="Second">Second</option>
+    <option value="Third">Third</option>
+    <option value="Final">Final</option>
+  </select>
+  <br>
+  Feedback
+ <textarea name="message" placeholder="feedback here" rows="10" cols="30"id="feedbck"> </textarea>
+ <p id="feedback"></p>
+  <br>
+ 
+ <button onclick="func();">Register</button>  
+</form>
+ 
+</body>
+</html>

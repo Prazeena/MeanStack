@@ -1,0 +1,45 @@
+<html>
+<script>
+function fun()
+{
+var x=document.details.username.value;
+document.getElementById('usname').innerHTML=x;
+document.getElementById('uname').style.display='none';
+
+var y=document.details.rollno.value;
+document.getElementById('rono').innerHTML=y;
+document.getElementById('rno').style.display='none';
+
+var z=document.details.clgname.value;
+document.getElementById('cnam').innerHTML=z;
+document.getElementById('clg').style.display='none';
+
+var w=document.details.con.value;
+document.getElementById('cont').innerHTML=w;
+document.getElementById('conc').style.display='none';
+
+var u=document.details.email.value;
+document.getElementById('enam').innerHTML=u;
+document.getElementById('ename').style.display='none';
+
+}
+</script>
+<body>
+<form name="details" style="color:blue;font-size:150%">
+Name:
+<input placeholder="Name" name="username" id="uname" type="text" required><br><br>
+<p id="usname"></p>
+Register no.:<input placeholder="Register number" name="rollno" id="rno" required maxlength="6"><br><br>
+<p id="rono"></p>
+College name:<input placeholder="College name" type="text" name="clgname" id="clg" required;"><br><br>
+<p id="cnam"></p>
+Contact:<input type="tel" minlength="10" maxlength="10" placeholder="Mobile number" name="con" id="conc" required"><br><br>
+<p id="cont"></p>
+E-mail:<input type="email" placeholder="E-mail id" name="email" id="ename" required><br><br>
+<p id="enam"></p>
+Password:<input placeholder="Password" type="password" name="pasw" id="pw" minlength="8" maxlength="16" required><br><br>
+<p id="pname"></p>
+</form>
+<button onclick="fun()">details</button>
+</body>
+</html>
